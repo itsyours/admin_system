@@ -1,6 +1,6 @@
 <?php
 
-require "header.inc.php";
+require "init.inc.php";
 if (!isLoggedIn()) {
     if (isset($_POST['submitButton'])) {
         if (!isset($_POST['username'])) {
@@ -23,11 +23,11 @@ if (!isLoggedIn()) {
             header("Location: ./home.php");
             exit();
         } else {
-            header("Location: ./index.php");
+            header("Location: ./index.php?err=1");
             exit();
         }
     }
-} else {
+} else { 
     if (isset($_POST['logoutButton'])) {
         $user = getUser();
         mysql_query("DELETE FROM active_users WHERE user= " . (int) $user['id']);
