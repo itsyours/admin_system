@@ -1,5 +1,4 @@
 <?php
-
 require "init.inc.php";
 if (!isLoggedIn()) {
     if (isset($_POST['submitButton'])) {
