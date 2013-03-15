@@ -86,7 +86,8 @@ if (!isLoggedIn()) {
                         <div class="block-header">Prihláste sa...</div>
                         <?php
                         $err = isset($_GET['err']);
-                        if ($err == 1) { ?>
+                        if ($err == 1) {
+                            ?>
 
                             <p class = "message error no-margin">Nesprávne meno alebo heslo</p>
                             <?php
@@ -129,20 +130,17 @@ if (!isLoggedIn()) {
             <img src = "http://designerz-crew.info/start/callb.png"></body>
     </html>
     <?php
-    print("<h2>Prihlásenie</h2>\n");
-    print("<form id=\"loginForm\" method=\"post\" action=\"./login.php\">\n");
-    print("Uživaťeľské meno: <input type=\"text\" name=\"username\" id=\"username\" /><br /><br />\n");
-    print("Heslo: <input type=\"password\" name=\"password\" id=\"password\"/><br/><br/>\n");
-    print("<button type=\"submit\" name=\"submitButton\" id=\"submitButton\">Prihlásiť</button>\n");
-    print("</form>\n");
 } else {
     include "header.inc.php";
-    print("<h2>Odhlásenie</h2>");
-    print ("<form id=\"logoutForm\" method=\"post\" action=\"./login.php\">\n");
-    print("<button type=\"submit\" name=\"logoutButton\" id=\"logoutButton\">Odhlásenie</button>\n");
-    print("</form>\n");
-}
 
+    if (isLoggedIn()) {
+        $user = getUser();
+        print("<h2>Odhlásenie " . $user['name'] . "</h2>");
+        print ("<form id=\"logoutForm\" method=\"post\" action=\"./login.php\">\n");
+        print("<button type=\"submit\" name=\"logoutButton\" id=\"logoutButton\">Odhlásenie</button>\n");
+        print("</form>\n");
+    }
+}
 
 include "./footer.inc.php";
 ?>

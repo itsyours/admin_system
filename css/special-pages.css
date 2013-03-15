@@ -3,6 +3,12 @@
 html {
 	height: 100%;
 }
+
+
+
+
+
+
 .login-bg,
 .wizard-bg {
 	background: url(../images/bg.png) no-repeat center -200px;

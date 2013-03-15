@@ -792,7 +792,8 @@ nav {
 #search-form {
 	display: inline;
 	position: relative;
-	z-index: 89;
+	float:right;
+        z-index: 89;
 }
 
 /********** Always visible control bar **********/
