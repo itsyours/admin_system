@@ -1,3 +1,8 @@
 tr.diffColor td { background-color: yellow; }
 
 #content tr.diffColor td { background-color: yellow; }
+ul.controls-buttons li.current a{
+    background: -moz-linear-gradient(center top , white, #2BCEF3 5%, #057FDB) repeat scroll 0 0 transparent;
+    border-color: #1EAFDC #1193D5 #035592;
+    color: white;   
+}

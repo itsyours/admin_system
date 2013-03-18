@@ -15,12 +15,8 @@ $sql = "select * from users order by id limit $start,$per_page";
 $rsd = mysql_query($sql);
 ?>
 
-<article class="container_12">
-    <section class="grid_12">
-        <div class="block-border">
-            <form class="block-content form" id="table_form" method="post" action="">
-                        <h1>Table</h1>
-            <table width="800px">
+
+            <table>
                 <script type="text/javascript">
                     $(function() {
                         $(":checkbox").change(function() {
@@ -31,7 +27,7 @@ $rsd = mysql_query($sql);
 
                 </script><?php
 //Print the contents
-
+echo $rsd;
                 while ($row = mysql_fetch_array($rsd)) {
 
                     $id = $row['ID'];
@@ -44,6 +40,4 @@ $rsd = mysql_query($sql);
                         } //while
                         ?>
             </table>
-        </form></div>
-    </section>
-</article>
+        

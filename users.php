@@ -55,7 +55,7 @@ if (isLoggedIn()) {
 
                     //Default Starting Page Results
 
-                    $("#controls-buttons li:first").css({'color': '#FF0084'}).css({'border': 'none'});
+                    $("#controls-buttons li:first").addClass('current').siblings().removeClass('current');
 
                     Display_Load();
 
@@ -69,13 +69,9 @@ if (isLoggedIn()) {
                         Display_Load();
 
                         //CSS Styles
-                        $("#controls-buttons li")
-                                .css({'border': 'solid #dddddd 1px'})
-                                .css({'color': '#0063DC'});
+                        
 
-                        $(this)
-                                .css({'color': '#FF0084'})
-                                .css({'border': 'none'});
+                        $(this).addClass('current').siblings().removeClass('current');
 
                         //Loading Data
                         var pageNum = this.id;
@@ -421,25 +417,29 @@ if (isLoggedIn()) {
                 <section class="grid_12">
                     <div class="block-border">
                         <form class="block-content form" id="table_form" method="post" action="">
-                            <h1>Table</h1>
+                            <h1>Zoznam užívaťeľov</h1>
                             <div class="block-controls">
 
                                 <ul id ="controls-buttons" class="controls-buttons">
                                     <?php
                                     //Show page links
                                     for ($i = 1; $i <= $pages; $i++) {
-                                        echo '<li id="' . $i . '">' . $i . '</li>';
+                                        echo '<li id="' . $i . '"><a href="#">' . $i . '</a></li>';
+                                    
+                                        
                                     }
-                                    ?>
+                                     ?>
                                 </ul>
 
                             </div>
-                            <div class="no-margin"><table class="table" cellspacing="0" width="100%">
+                            <div class="no-margin"></div>
+                                <table class="table" cellspacing="0" width="100%">
 
 
-                                    <div id="content" ></div></div>
+                                    <div id="content" ></div>
                             </table>
-                        </form></div>
+                        </form>
+                </div>
                 </section>
             </article>
             <!--             tabulka-->
