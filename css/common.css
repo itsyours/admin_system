@@ -755,7 +755,7 @@ section {
 	-moz-border-radius: 0.25em;
 	-webkit-border-radius: 0.25em;
 	border-radius: 0.25em;
-	padding: 1.667em;
+	padding: 10px;
 	background: white;
 	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
@@ -815,7 +815,7 @@ section {
 		margin-top: -1.667em;
 	}
 .block-content .no-margin:last-child {
-	margin-bottom: -1.667em;
+	margin: 0 -10px -10px;
 	-moz-border-radius-bottomleft: 0.167em;
 	-moz-border-radius-bottomright: 0.167em;
 	-webkit-border-bottom-left-radius: 0.167em;
@@ -1317,7 +1317,7 @@ section {
 	section .block-controls + .message.no-margin,
 	section .block-header + .message.no-margin,
 	section .message.no-margin + .message.no-margin {
-		margin-top: -1.667em;
+		margin:-10px -10px 10px;
 		border-top: none;
 	}
 	

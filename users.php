@@ -25,7 +25,7 @@ if (isLoggedIn()) {
             <!-- html5.js has to be loaded before anything else -->
             <script type="text/javascript" src="js/mini.php?files=html5,jquery-1.4.2.min,old-browsers,jquery.accessibleList,searchField,common,standard,jquery.tip,jquery.hashchange,jquery.contextMenu,list"></script>
             <!--[if lte IE 8]><script type="text/javascript" src="js/standard.ie.js"></script><![endif]-->
-
+            <script type="text/javascript" src="js/jquery.tablesorter.js"></script> 
             <!-- Charts library -->
             <!--Load the AJAX API-->
             <script type="text/javascript" src="http://www.google.com/jsapi"></script>
@@ -69,7 +69,7 @@ if (isLoggedIn()) {
                         Display_Load();
 
                         //CSS Styles
-                        
+
 
                         $(this).addClass('current').siblings().removeClass('current');
 
@@ -121,6 +121,9 @@ if (isLoggedIn()) {
                             ]});
                     });
                 });
+
+ 
+
 
             </script>
 
@@ -411,12 +414,14 @@ if (isLoggedIn()) {
             $sql = "select * from users";
             $rsd = mysql_query($sql);
             $count = mysql_num_rows($rsd);
+            echo $count;
+            echo $per_page;
             $pages = ceil($count / $per_page)
             ?>
             <article class="container_12">
                 <section class="grid_12">
                     <div class="block-border">
-                        <form class="block-content form" id="table_form" method="post" action="">
+                        <form class="block-content form" id="table_form" method="post" action="test.php">
                             <h1>Zoznam užívaťeľov</h1>
                             <div class="block-controls">
 
@@ -425,21 +430,18 @@ if (isLoggedIn()) {
                                     //Show page links
                                     for ($i = 1; $i <= $pages; $i++) {
                                         echo '<li id="' . $i . '"><a href="#">' . $i . '</a></li>';
-                                    
-                                        
                                     }
-                                     ?>
+                                    ?>
                                 </ul>
 
                             </div>
                             <div class="no-margin"></div>
-                                <table class="table" cellspacing="0" width="100%">
 
 
-                                    <div id="content" ></div>
-                            </table>
-                        </form>
-                </div>
+
+                            <div id="content"></div>
+                            </br> <input type="submit" value="Submit"> </form>
+                    </div>
                 </section>
             </article>
             <!--             tabulka-->
@@ -464,7 +466,7 @@ if (isLoggedIn()) {
 
                             </div>
 
-                            <div class="no-margin"><table class="table" cellspacing="0" width="100%">
+                            <div class="no-margin"><table class="mtable" cellspacing="0" width="100%">
 
                                     <thead>
                                         <tr>

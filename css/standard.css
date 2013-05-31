@@ -986,7 +986,7 @@ article {
 		}
 
 .block-content {
-	padding-top: 2.833em;
+	/*padding-top: 2.833em;*/
 	}
 	.block-content.no-title {
 		padding-top: 1.667em;
@@ -1002,7 +1002,7 @@ article {
 .block-content .block-header:first-child,
 .block-content h1:first-child + .block-header,
 .block-content .h1:first-child + .block-header {
-	margin-top: -1.417em;
+	margin: -10px -10px 10px;
 	-moz-border-radius: 0.083em 0.083em 0 0;
 	-webkit-border-top-left-radius: 0.083em;
 	-webkit-border-top-right-radius: 0.083em;
@@ -1062,7 +1062,7 @@ article {
 .block-content .block-controls:first-child,
 .block-content h1:first-child + .block-controls,
 .block-content .h1:first-child + .block-controls {
-	margin-top: -2.833em;
+	margin: -8px -10px 28px;
 	-moz-border-radius-topleft: 0.2em;
 	-moz-border-radius-topright: 0.2em;
 	-webkit-border-top-left-radius: 0.2em;

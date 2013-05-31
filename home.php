@@ -165,7 +165,7 @@ if (isLoggedIn()) {
                             <li><a href="#" title="Settings">Settings</a></li>
                         </ul>
                     </li>
-                    <li class="users"><a href="#" title="Users">Users</a>
+                    <li class="users"><a href="users.php" title="Users">Users</a>
                         <ul>
                             <li><a href="#" title="Browse">List</a></li>
                             <li><a href="#" title="Add user">Add user</a></li>
